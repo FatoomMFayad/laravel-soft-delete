@@ -14,7 +14,7 @@ class AddDeletedAtColumnToPosts extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->timestamp('deleted_at')->nullable();
+            $table->timestamp('deleted_at')->after('body')->nullable();
         });
     }
 
